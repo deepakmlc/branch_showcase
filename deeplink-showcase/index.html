@@ -10,20 +10,21 @@
 
          function logLoadedEvent() {
 
-            var eventName = "OPEN"
+        var eventName = "CLICK"
 
-            var custom_data = {
-                "by":"deepak.gupta@moloco.com"
-                };
+        var custom_data = {
+            "from": "local",
+            "by":"deepak.gupta@moloco.com"
+            };
 
-            branch.logEvent(
-                    eventName,
-                    custom_data,
-                    function(err) {
-                        debugger
-                        console.log(err);
-                    }
-                );
+        branch.logEvent(
+                eventName,
+                custom_data,
+                function(err) {
+                    debugger
+                    console.log(err); 
+                }
+            );
         }
 
         // below is test key
