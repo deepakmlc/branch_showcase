@@ -10,7 +10,7 @@
 
          function logLoadedEvent() {
 
-            var eventName = "OPEN"
+            var eventName = "CLICK"
 
             var custom_data = {
                 "by":"deepak.gupta@moloco.com"
@@ -20,7 +20,7 @@
                     eventName,
                     custom_data,
                     function(err) {
-                        debugger
+                        // debugger
                         console.log(err);
                     }
                 );
@@ -29,12 +29,12 @@
         // below is test key
          //branch.init('key_test_ivjDwGyos2W01K7AaHymxaknurkxoo9L'); // Change `key_live_YOUR_KEY_GOES_HERE` to match your Branch Dashboard
          branch.init('key_live_ltovEPBmuZ108TWtjNslkjihvsoFhm8s', function(err, data) {
-            debugger
+            // debugger
             console.log(err, data);
             
-            branch.setIdentity('456321_deepak.gupta@moloco.com');
+            branch.setIdentity('deepak.gupta@moloco.com');
 
-            logLoadedEvent()
+
             });
       </script>
    </head>
@@ -42,5 +42,8 @@
     <h3>
         Branch.io Show case
     </h3>
+   <button onclick="logLoadedEvent()">
+       CTA
+   </button>
    </body>
 </html>
