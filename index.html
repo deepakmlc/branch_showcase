@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title></title>
+      <script>
+         // load Branch
+         (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener banner closeBanner closeJourney data deepview deepviewCta first init link logout removeListener setBranchViewData setIdentity track trackCommerceEvent logEvent disableTracking getBrowserFingerprintId crossPlatformIds lastAttributedTouchData setAPIResponseCallback qrCode".split(" "), 0);
+         // init Branch
+
+         function logLoadedEvent() {
+
+        var eventName = "CLICK"
+
+        var custom_data = {
+            "from": "local",
+            "by":"deepak.gupta@moloco.com"
+            };
+
+        branch.logEvent(
+                eventName,
+                custom_data,
+                function(err) {
+                    debugger
+                    console.log(err); 
+                }
+            );
+        }
+
+        // below is test key
+         //branch.init('key_test_ivjDwGyos2W01K7AaHymxaknurkxoo9L'); // Change `key_live_YOUR_KEY_GOES_HERE` to match your Branch Dashboard
+         branch.init('key_live_ltovEPBmuZ108TWtjNslkjihvsoFhm8s', function(err, data) {
+            debugger
+            console.log(err, data);
+            
+            branch.setIdentity('456321_deepak.gupta@moloco.com');
+
+            logLoadedEvent()
+            });
+      </script>
+   </head>
+   <body>
+    <h3>
+        Branch.io Show case
+    </h3>
+   </body>
+</html>
